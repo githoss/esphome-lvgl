@@ -365,8 +365,8 @@ lvgl:
               - label:
                   text_font: $icon_font
                   align: top_left
-                  text: $printer
-              - label:
-                  align: bottom_left
                   id: print_progress_label
                   text: "--%"
+              - label:
+                  align: bottom_left
+                  text: "Print Progress"
