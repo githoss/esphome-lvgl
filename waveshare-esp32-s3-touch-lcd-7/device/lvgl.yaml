@@ -362,17 +362,23 @@ lvgl:
             id: print_progress_button
             styles: control
             widgets:
-              - label:
-                  text_font: roboto36_font
+              - obj:
                   align: top_left
-                  id: print_progress_label
-                  text: "--"
-              - label:
-                  text_font: roboto17_font
-                  align_to:
-                    id: print_progress_label
-                    align: out_right_bottom
-                  text: "%"
+                  height: SIZE_CONTENT
+                  width: SIZE_CONTENT
+                  layout:
+                    type: flex
+                    flex_flow: row
+                    flex_align_cross: end
+                  bg_opa: TRANSP
+                  widgets:
+                    - label:
+                        text_font: roboto36_font
+                        id: print_progress_label
+                        text: "--"
+                    - label:
+                        text_font: roboto17_font
+                        text: "%"
               - label:
                   align: bottom_left
                   text: "Print Progress"
