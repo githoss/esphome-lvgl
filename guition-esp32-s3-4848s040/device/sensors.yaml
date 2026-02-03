@@ -185,7 +185,7 @@ sensor:
           text:
             format: "%.0f°"
             args: [ 'x' ]
-      - lvgl.widget.update:
+      - lvgl.arc.update:
           id: aircon_target_arc
           value: !lambda return (int)x;
 
