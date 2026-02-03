@@ -1022,6 +1022,15 @@ lvgl:
                     bg_color: 0x7A7A7A
                   clickable: false
 
+              # Mode label
+              - label:
+                  id: aircon_lab_mode_label
+                  text: "Auto"
+                  text_font: roboto17_font
+                  text_color: 0xFFFFFF
+                  align: center
+                  y: -70
+
               # Target temperature label (center)
               - label:
                   id: aircon_lab_target_label
