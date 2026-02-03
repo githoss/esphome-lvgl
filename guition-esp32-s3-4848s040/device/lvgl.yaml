@@ -1008,29 +1008,20 @@ lvgl:
                   end_angle: 45
                   rotation: 0
                   value: 22
-                  arc_width: 6
+                  arc_width: 0
                   arc_color: 0x000000
                   indicator:
                     arc_color: 0x7A7A7A
-                    arc_width: 6
+                    arc_width: 0
                   knob:
-                    bg_color: 0x000000
+                    bg_color: 0x7A7A7A
                   clickable: false
-
-              # Mode label
-              - label:
-                  id: aircon_lab_mode_label
-                  text: "Auto"
-                  text_font: roboto17_font
-                  text_color: 0xFFFFFF
-                  align: center
-                  y: -70
 
               # Target temperature label (center)
               - label:
                   id: aircon_lab_target_label
                   text: "--°"
-                  text_font: roboto44_font
+                  text_font: roboto48_font
                   text_color: 0xFFFFFF
                   align: center
 
@@ -1038,7 +1029,7 @@ lvgl:
               - label:
                   id: aircon_lab_current_label
                   text: "--°"
-                  text_font: roboto17_font
+                  text_font: roboto36_font
                   text_color: 0xFFFFFF
                   align: center
                   y: 60
