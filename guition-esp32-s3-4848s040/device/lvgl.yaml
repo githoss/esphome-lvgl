@@ -982,8 +982,8 @@ lvgl:
                   end_angle: 45
                   rotation: 0
                   value: 22
-                  arc_width: 0
-                  arc_color: 0x000000
+                  arc_width: 18
+                  arc_color: 0x2A2A2A
                   clickable: true
                   adjustable: true
                   indicator:
