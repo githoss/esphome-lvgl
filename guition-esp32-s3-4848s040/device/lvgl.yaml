@@ -738,6 +738,7 @@ lvgl:
             checkable: false
             id: aircon_back_button
             styles: control
+            y: 10
             widgets:
               - label:
                   text_font: $icon_font
@@ -953,7 +954,7 @@ lvgl:
                   width: 120px
                   height: 60px
                   x: 10
-                  y: 10
+                  y: 50
                   styles: control
                   widgets:
                     - label:
@@ -1089,7 +1090,7 @@ lvgl:
                   width: 140px
                   height: 70px
                   x: 320
-                  y: 10
+                  y: 50
                   styles: control
                   checkable: true
                   widgets:
