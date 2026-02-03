@@ -67,68 +67,6 @@ lvgl:
           text_color: 0xFFFFFF
           
   pages:
-    - id: experiment_page
-      scrollbar_mode: "off"
-      scroll_dir: "none"
-      width: 100%
-      bg_color: Black
-      bg_opa: cover
-      pad_top: 10
-      pad_bottom: 10
-      pad_left: 10
-      pad_right: 10
-
-      widgets:
-
-        # =========================================================================
-        # LABEL: Large Clock
-        # =========================================================================
-        - label:
-            text: "--:--"
-            id: experiment_time
-            text_font: roboto140_thin_font
-            text_color: 0xFFFFFF
-            align: center
-            text_align: center
-
-        # =========================================================================
-        # BUTTON: Home (Go to Main Page)
-        # =========================================================================
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: experiment_back_button
-            styles: control
-            align: bottom_mid
-            y: 0
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $chevron_left
-              - label:
-                  align: bottom_left
-                  text: "Home"
-            on_click:
-              - lvgl.page.show: main_page
-
-      on_load:
-        - lvgl.widget.update:
-            id: temperatures
-            hidden: true
-        - lvgl.widget.update:
-            id: display_time
-            hidden: true
-
-      on_unload:
-        - lvgl.widget.update:
-            id: temperatures
-            hidden: false
-        - lvgl.widget.update:
-            id: display_time
-            hidden: false
-
     - id: main_page
       layout: 
         type: flex
@@ -316,29 +254,6 @@ lvgl:
                   text: "Blinds"
             on_click:
               - lvgl.page.show: blinds_page
-
-        # =========================================================================
-        # BUTTON: Experiment (Open Blank Page)
-        # =========================================================================
-        # WHAT THIS BUTTON DOES:
-        #   Navigates to the experimental blank page.
-        # =========================================================================
-        - button: 
-            height: $button_height_single
-            width: $button_width
-            checkable: false
-            id: experiment_nav_button
-            styles: control
-            widgets:
-              - label:
-                  text_font: $icon_font
-                  align: top_left
-                  text: $application
-              - label:
-                  align: bottom_left
-                  text: "Experiment"
-            on_click:
-              - lvgl.page.show: experiment_page
 
 
         # =========================================================================

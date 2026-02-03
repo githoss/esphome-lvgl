@@ -15,24 +15,6 @@ font:
     bpp: 4
 
   - file: "gfonts://Roboto"
-    id: roboto96_font
-    size: 96
-    bpp: 4
-
-  - file: "gfonts://Roboto"
-    id: roboto120_font
-    size: 120
-    bpp: 4
-
-  - file:
-      type: gfonts
-      family: Roboto
-      weight: 100
-    id: roboto140_thin_font
-    size: 140
-    bpp: 4
-
-  - file: "gfonts://Roboto"
     id: roboto44_font
     size: 44
     bpp: 4
