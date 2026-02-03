@@ -69,8 +69,8 @@ lvgl:
     - id: main_page
       layout: 
         type: flex
-        flex_flow: row_wrap
-      scrollbar_mode: "off"
+        flex_flow: row_nowrap
+      scrollbar_mode: "auto"
       scroll_dir: "hor"
       width: 100%
       bg_color: Black
@@ -478,8 +478,8 @@ lvgl:
     - id: blinds_page
       layout: 
         type: flex
-        flex_flow: row_wrap
-      scrollbar_mode: "off"
+        flex_flow: row_nowrap
+      scrollbar_mode: "auto"
       scroll_dir: "hor"
       width: 100%
       bg_color: Black
