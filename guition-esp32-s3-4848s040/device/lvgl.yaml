@@ -1304,11 +1304,10 @@ lvgl:
               - label:
                   id: heating_lab_current_label
                   text: "--.-°C"
-                  text_font: roboto17_font
-                  text_color: 0x9C9C9C
+                  text_font: roboto19_font
+                  text_color: 0xB0B0B0
                   align: center
-                  y: 60
-                  hidden: true
+                  y: 55
 
               # Down button (-0.5C)
               - button:
