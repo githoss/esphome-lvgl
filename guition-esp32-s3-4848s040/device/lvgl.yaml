@@ -1255,10 +1255,10 @@ lvgl:
               # Dot for target temperature
               - arc:
                   id: heating_target_dot_arc
-                  x: 80
-                  y: 100
-                  width: 320
-                  height: 320
+                  x: 75
+                  y: 95
+                  width: 330
+                  height: 330
                   min_value: 20
                   max_value: 64
                   start_angle: 135
