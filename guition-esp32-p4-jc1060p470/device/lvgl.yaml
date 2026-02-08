@@ -42,7 +42,7 @@ lvgl:
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_features_button
             styles: control
             widgets:
@@ -57,15 +57,15 @@ lvgl:
                   text: "Features"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_features
+                    entity_id: switch.office_features_stateful_scene
 
         # Office Calls Scene
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_calls_button
             styles: control
             widgets:
@@ -80,15 +80,15 @@ lvgl:
                   text: "Calls"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_desk_call
+                    entity_id: switch.office_calls_stateful_scene
 
         # Office Evening Scene
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_evening_button
             styles: control
             widgets:
@@ -103,15 +103,15 @@ lvgl:
                   text: "Evening"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_evening
+                    entity_id: switch.office_evening_stateful_scene
 
         # Office Dimmed Scene
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_dimmed_button
             styles: control
             widgets:
@@ -126,9 +126,9 @@ lvgl:
                   text: "Dimmed"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_dimmed
+                    entity_id: switch.office_dimmed_stateful_scene
 
         # Office Blind 100%
         - button: 

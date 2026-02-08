@@ -92,18 +92,18 @@ lvgl:
         #   LED strip accent lighting for a decorative effect.
         #
         # WHEN PRESSED:
-        #   Calls Home Assistant service: scene.turn_on
-        #   Target: scene.office_features
+        #   Calls Home Assistant service: switch.toggle
+        #   Target: switch.office_features_stateful_scene
         #
         # HOW THE BUTTON KNOWS IF IT'S ACTIVE:
-        #   sensors.yaml monitors: binary_sensor.office_scene_features
+        #   sensors.yaml monitors: switch.office_features_stateful_scene
         #   When that sensor is ON, this button appears "checked" (highlighted)
         #   When that sensor is OFF, this button appears unchecked (dimmed)
         # =========================================================================
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_features_button
             styles: control
             grid_cell_column_pos: 0
@@ -120,9 +120,9 @@ lvgl:
                   text: "Features"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_features
+                    entity_id: switch.office_features_stateful_scene
 
         # =========================================================================
         # BUTTON: Calls Scene
@@ -132,17 +132,17 @@ lvgl:
         #   video calls (good front lighting, reduced background glare).
         #
         # WHEN PRESSED:
-        #   Calls Home Assistant service: scene.turn_on
-        #   Target: scene.office_desk_call
+        #   Calls Home Assistant service: switch.toggle
+        #   Target: switch.office_calls_stateful_scene
         #
         # HOW THE BUTTON KNOWS IF IT'S ACTIVE:
-        #   sensors.yaml monitors: binary_sensor.office_scene_desk_call
+        #   sensors.yaml monitors: switch.office_calls_stateful_scene
         #   When that sensor is ON, this button appears "checked" (highlighted)
         # =========================================================================
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_calls_button
             styles: control
             grid_cell_column_pos: 1
@@ -159,9 +159,9 @@ lvgl:
                   text: "Calls"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_desk_call
+                    entity_id: switch.office_calls_stateful_scene
 
         # =========================================================================
         # BUTTON: Evening Scene
@@ -171,17 +171,17 @@ lvgl:
         #   for relaxed evening use (lower brightness, warmer colors).
         #
         # WHEN PRESSED:
-        #   Calls Home Assistant service: scene.turn_on
-        #   Target: scene.office_evening
+        #   Calls Home Assistant service: switch.toggle
+        #   Target: switch.office_evening_stateful_scene
         #
         # HOW THE BUTTON KNOWS IF IT'S ACTIVE:
-        #   sensors.yaml monitors: binary_sensor.office_scene_evening
+        #   sensors.yaml monitors: switch.office_evening_stateful_scene
         #   When that sensor is ON, this button appears "checked" (highlighted)
         # =========================================================================
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_evening_button
             styles: control
             grid_cell_column_pos: 2
@@ -198,9 +198,9 @@ lvgl:
                   text: "Evening"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_evening
+                    entity_id: switch.office_evening_stateful_scene
 
         # =========================================================================
         # BUTTON: Dimmed Scene
@@ -210,17 +210,17 @@ lvgl:
         #   useful for watching movies or reducing eye strain at night.
         #
         # WHEN PRESSED:
-        #   Calls Home Assistant service: scene.turn_on
-        #   Target: scene.office_dimmed
+        #   Calls Home Assistant service: switch.toggle
+        #   Target: switch.office_dimmed_stateful_scene
         #
         # HOW THE BUTTON KNOWS IF IT'S ACTIVE:
-        #   sensors.yaml monitors: binary_sensor.office_scene_dimmed
+        #   sensors.yaml monitors: switch.office_dimmed_stateful_scene
         #   When that sensor is ON, this button appears "checked" (highlighted)
         # =========================================================================
         - button: 
             height: $button_height_single
             width: $button_width
-            checkable: false
+            checkable: true
             id: office_scene_dimmed_button
             styles: control
             grid_cell_column_pos: 0
@@ -237,9 +237,9 @@ lvgl:
                   text: "Dimmed"
             on_press:
               - homeassistant.service:
-                  service: scene.turn_on
+                  service: switch.toggle
                   data:
-                    entity_id: scene.office_dimmed
+                    entity_id: switch.office_dimmed_stateful_scene
 
         # =========================================================================
         # BUTTON: Blinds (Open Blind Controls Page)

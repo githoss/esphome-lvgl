@@ -382,7 +382,7 @@ binary_sensor:
   # ===========================================================================
   # WHAT IT MONITORS:
   #   Whether the "Evening" lighting scene is currently active
-  #   Watches: binary_sensor.office_scene_evening in Home Assistant
+  #   Watches: switch.office_evening_stateful_scene in Home Assistant
   #
   # WHAT IT UPDATES:
   #   The "Evening" button's visual state (highlighted when active)
@@ -398,7 +398,7 @@ binary_sensor:
   # ===========================================================================
   - platform: homeassistant
     id: office_scene_evening
-    entity_id: binary_sensor.office_scene_evening
+    entity_id: switch.office_evening_stateful_scene
     trigger_on_initial_state: true
     on_state:
       then:
@@ -412,7 +412,7 @@ binary_sensor:
   # ===========================================================================
   # WHAT IT MONITORS:
   #   Whether the "Dimmed" lighting scene is currently active
-  #   Watches: binary_sensor.office_scene_dimmed in Home Assistant
+  #   Watches: switch.office_dimmed_stateful_scene in Home Assistant
   #
   # WHAT IT UPDATES:
   #   The "Dimmed" button's visual state (highlighted when active)
@@ -422,7 +422,7 @@ binary_sensor:
   # ===========================================================================
   - platform: homeassistant
     id: office_scene_dimmed
-    entity_id: binary_sensor.office_scene_dimmed
+    entity_id: switch.office_dimmed_stateful_scene
     trigger_on_initial_state: true
     on_state:
       then:
@@ -436,7 +436,7 @@ binary_sensor:
   # ===========================================================================
   # WHAT IT MONITORS:
   #   Whether the "Calls" (video call) lighting scene is currently active
-  #   Watches: binary_sensor.office_scene_desk_call in Home Assistant
+  #   Watches: switch.office_calls_stateful_scene in Home Assistant
   #
   # WHAT IT UPDATES:
   #   The "Calls" button's visual state (highlighted when active)
@@ -446,7 +446,7 @@ binary_sensor:
   # ===========================================================================
   - platform: homeassistant
     id: office_scene_desk_call
-    entity_id: binary_sensor.office_scene_desk_call
+    entity_id: switch.office_calls_stateful_scene
     trigger_on_initial_state: true
     on_state:
       then:
@@ -460,7 +460,7 @@ binary_sensor:
   # ===========================================================================
   # WHAT IT MONITORS:
   #   Whether the "Features" (LED accent) lighting scene is currently active
-  #   Watches: binary_sensor.office_scene_features in Home Assistant
+  #   Watches: switch.office_features_stateful_scene in Home Assistant
   #
   # WHAT IT UPDATES:
   #   The "Features" button's visual state (highlighted when active)
@@ -470,7 +470,7 @@ binary_sensor:
   # ===========================================================================
   - platform: homeassistant
     id: office_scene_features
-    entity_id: binary_sensor.office_scene_features
+    entity_id: switch.office_features_stateful_scene
     trigger_on_initial_state: true
     on_state:
       then:
