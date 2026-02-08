@@ -24,7 +24,7 @@ This repository contains ESPHome configurations for creating beautiful, touch-en
 
 You can find the supported panels on AliExpress. Links are placeholders for now.
 
-- **Guition ESP32-P4 JC1060P470 (10.6")**: `(AliExpress)[https://s.click.aliexpress.com/e/_c335W0r5]`
+- **Guition ESP32-P4 JC1060P470 (10.6")**: (AliExpress) [https://s.click.aliexpress.com/e/_c335W0r5]
 - **Guition ESP32-S3 4848S040 (4.0")**: `[https://s.click.aliexpress.com/e/_c3sIhvBv](AliExpress)`
 - **Waveshare ESP32-S3 Touch LCD 7"**: `[https://s.click.aliexpress.com/e/_c37ljk8J](AliExpress)`
 
@@ -93,7 +93,7 @@ Each template pulls in modular components that you can customize:
 
 ## Getting Started with ESPHome
 
-1. **Install ESPHome**: Follow the [ESPHome installation guide](https://esphome.io/guides/installing_esphome.html)
+1. **Install ESPHome**: Follow the [ESPHome installation guide] (https://esphome.io/guides/installing_esphome.html)
 
 2. **Copy the repo**: Use the device template in `*/esphome/` as your starting configuration
 
