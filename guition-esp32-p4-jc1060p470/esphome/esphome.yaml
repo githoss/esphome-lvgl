@@ -1,4 +1,4 @@
-# ESP32-S3-Touch-LCD-7
+# ESP32-P4-JC1060P470
 substitutions:
   name: "your-device-name"
   friendly_name: "Your Room Sensor"
