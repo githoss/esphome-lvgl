@@ -60,7 +60,7 @@ sensor:
   #   lvgl.yaml → temperatures label (id: temperatures)
   # ===========================================================================
   - platform: homeassistant
-    entity_id: sensor.office_temperature
+    entity_id: sensor.gv_t_h_living_room_temperature
     id: office_temperature
     on_value:
       - lvgl.label.update:
@@ -92,7 +92,7 @@ sensor:
   #   lvgl.yaml → temperatures label (id: temperatures)
   # ===========================================================================
   - platform: homeassistant
-    entity_id: sensor.outdoor_temperature
+    entity_id: sensor.feerothsidney_temperature
     id: outdoor_temperature
     on_value:
       - lvgl.label.update:
@@ -142,7 +142,7 @@ sensor:
   #   lvgl.yaml → aircon_temp_label
   # ===========================================================================
   - platform: homeassistant
-    entity_id: climate.office_air_conditioner
+    entity_id: climate.heatpumplivingroom_heat_pump_living_room
     id: aircon_current_temperature
     attribute: current_temperature
     on_value:
@@ -169,7 +169,7 @@ sensor:
   #   lvgl.yaml → aircon_set_temp_label
   # ===========================================================================
   - platform: homeassistant
-    entity_id: climate.office_air_conditioner
+    entity_id: climate.heatpumplivingroom_heat_pump_living_room
     id: aircon_target_temperature
     attribute: temperature
     on_value:
@@ -201,7 +201,7 @@ sensor:
   #   lvgl.yaml → heating_lab_current_label, heating_current_arc
   # ===========================================================================
   - platform: homeassistant
-    entity_id: climate.office_radiator_thermostat
+    entity_id: climate.heatpumplivingroom_heat_pump_living_room
     id: heating_current_temperature
     attribute: current_temperature
     on_value:
@@ -250,7 +250,7 @@ sensor:
   #   lvgl.yaml → heating_lab_target_label, heating_target_arc
   # ===========================================================================
   - platform: homeassistant
-    entity_id: climate.office_radiator_thermostat
+    entity_id: climate.heatpumplivingroom_heat_pump_living_room
     id: heating_target_temperature
     attribute: temperature
     on_value:
@@ -307,7 +307,7 @@ text_sensor:
   #   lvgl.yaml → heating_lab_mode_label
   # ===========================================================================
   - platform: homeassistant
-    entity_id: climate.office_radiator_thermostat
+    entity_id: climate.heatpumplivingroom_heat_pump_living_room
     id: heating_hvac_action
     attribute: hvac_action
     on_value:
