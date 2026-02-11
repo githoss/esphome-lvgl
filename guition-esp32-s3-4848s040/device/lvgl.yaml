@@ -104,7 +104,7 @@ lvgl:
             height: $button_height_single
             width: $button_width
             checkable: true
-            id: light_living_room
+            id: light_living_room_button
             styles: control
             grid_cell_column_pos: 0
             grid_cell_row_pos: 0
