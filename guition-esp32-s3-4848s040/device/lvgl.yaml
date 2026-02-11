@@ -1,3 +1,31 @@
+touchscreen:
+  - platform: ...
+    on_release:
+      - if:
+          condition: lvgl.is_paused
+          then:
+            - logger.log: "LVGL resuming"
+            - lvgl.resume:
+            - lvgl.widget.redraw:
+            - light.turn_on: display_backlight
+
+light:
+  - platform: ...
+    id: display_backlight
+
+number:
+  - platform: template
+    name: LVGL Screen timeout
+    optimistic: true
+    id: display_timeout
+    unit_of_measurement: "s"
+    initial_value: 30
+    restore_value: true
+    min_value: 10
+    max_value: 180
+    step: 5
+    mode: box
+
 # =============================================================================
 # LVGL TOUCHSCREEN INTERFACE
 # =============================================================================
@@ -18,6 +46,12 @@
 # =============================================================================
 
 lvgl:
+  on_idle:
+    timeout: !lambda "return (id(display_timeout).state * 1000);"
+    then:
+      - logger.log: "LVGL is idle"
+      - light.turn_off: display_backlight
+      - lvgl.pause:
   buffer_size: 100%
   top_layer:
     widgets:
